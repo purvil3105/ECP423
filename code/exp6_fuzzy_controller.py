@@ -92,5 +92,3 @@ ax[2].set_title("FLC control surface du(e, de)")
 ax[2].set_xlabel("e (normalised)"); ax[2].set_ylabel("de (normalised)")
 plt.tight_layout();
 plt.show()
-plt.savefig("outputs/exp6_flc.png", dpi=120)
-print("\nPlot saved: outputs/exp6_flc.png")

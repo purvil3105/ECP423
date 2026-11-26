@@ -70,5 +70,3 @@ ax[1].set_title("Fuzzification of T = 25 C"); ax[1].set_xlabel("Temperature (C)"
 ax[1].set_ylabel("mu"); ax[1].legend(); ax[1].grid()
 plt.tight_layout()
 plt.show()
-plt.savefig("outputs/exp1_membership.png", dpi=120)
-print("\nPlot saved: outputs/exp1_membership.png")

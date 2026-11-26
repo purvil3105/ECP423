@@ -89,5 +89,3 @@ ax[1].set_title("Control surface (centroid)"); ax[1].set_xlabel("Temperature (C)
 ax[1].set_ylabel("Humidity (%)")
 plt.tight_layout();
 plt.show()
-plt.savefig("outputs/exp5_fis.png", dpi=120)
-print("\nPlot saved: outputs/exp5_fis.png")

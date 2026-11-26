@@ -55,5 +55,3 @@ ax[1].plot(y_grid, muB, "r"); ax[1].set_title("Output fuzzy set B = f(A), f(x)=x
 ax[1].set_xlabel("y"); ax[1].grid()
 plt.tight_layout();
 plt.show()
-plt.savefig("outputs/exp4_extension.png", dpi=120)
-print("\nPlot saved: outputs/exp4_extension.png")

@@ -100,5 +100,3 @@ ax[1].set_title("Control signal u(t)"); ax[1].set_xlabel("Time (s)")
 ax[1].set_ylabel("u(t)"); ax[1].legend(); ax[1].grid()
 plt.tight_layout();
 plt.show()
-plt.savefig("outputs/exp7_comparison.png", dpi=120)
-print("Plot saved: outputs/exp7_comparison.png")

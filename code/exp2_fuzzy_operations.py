@@ -69,5 +69,3 @@ for k, (res, title) in enumerate([(U(a, b), "Union  max(A,B)"),
     ax[k].set_title(title); ax[k].set_xlabel("x"); ax[k].legend(); ax[k].grid()
 plt.tight_layout();
 plt.show()
-plt.savefig("outputs/exp2_operations.png", dpi=120)
-print("\nPlot saved: outputs/exp2_operations.png")
