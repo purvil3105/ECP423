@@ -2,8 +2,6 @@
 # Plant : A dh/dt = q_in - a*sqrt(h)        (non-linear single tank)
 # FLC   : inputs e, de  ->  output du (incremental / PI type),  q_in += du
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 def trimf(x, a, b, c):
@@ -92,5 +90,7 @@ Z = np.vectorize(flc)(E, D)
 cs = ax[2].contourf(E, D, Z, 15, cmap="coolwarm"); plt.colorbar(cs, ax=ax[2])
 ax[2].set_title("FLC control surface du(e, de)")
 ax[2].set_xlabel("e (normalised)"); ax[2].set_ylabel("de (normalised)")
-plt.tight_layout(); plt.savefig("outputs/exp6_flc.png", dpi=120)
+plt.tight_layout();
+plt.show()
+plt.savefig("outputs/exp6_flc.png", dpi=120)
 print("\nPlot saved: outputs/exp6_flc.png")

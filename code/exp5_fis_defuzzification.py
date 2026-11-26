@@ -1,8 +1,6 @@
 # Experiment 5: Mamdani fuzzy inference system and defuzzification methods
 # Problem: fan speed (%) from room temperature (C) and humidity (%)
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 def trimf(x, a, b, c):
@@ -89,5 +87,7 @@ Z = np.vectorize(lambda a, b: defuzz(infer(a, b)[0], "Centroid"))(TT, HH)
 cs = ax[1].contourf(TT, HH, Z, 15, cmap="viridis"); plt.colorbar(cs, ax=ax[1])
 ax[1].set_title("Control surface (centroid)"); ax[1].set_xlabel("Temperature (C)")
 ax[1].set_ylabel("Humidity (%)")
-plt.tight_layout(); plt.savefig("outputs/exp5_fis.png", dpi=120)
+plt.tight_layout();
+plt.show()
+plt.savefig("outputs/exp5_fis.png", dpi=120)
 print("\nPlot saved: outputs/exp5_fis.png")

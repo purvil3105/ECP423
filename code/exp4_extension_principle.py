@@ -1,7 +1,5 @@
 # Experiment 4: Fuzzy extension principle
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 def extend1(xs, mu, f):
@@ -55,5 +53,7 @@ ax[0].plot(x, muA); ax[0].set_title("Input fuzzy set A ('about 1')")
 ax[0].set_xlabel("x"); ax[0].grid()
 ax[1].plot(y_grid, muB, "r"); ax[1].set_title("Output fuzzy set B = f(A), f(x)=x^2")
 ax[1].set_xlabel("y"); ax[1].grid()
-plt.tight_layout(); plt.savefig("outputs/exp4_extension.png", dpi=120)
+plt.tight_layout();
+plt.show()
+plt.savefig("outputs/exp4_extension.png", dpi=120)
 print("\nPlot saved: outputs/exp4_extension.png")

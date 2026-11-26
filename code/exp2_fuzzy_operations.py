@@ -1,7 +1,5 @@
 # Experiment 2: Operations on fuzzy sets and verification of their properties
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 X = ["x1", "x2", "x3", "x4", "x5", "x6"]
@@ -69,5 +67,7 @@ for k, (res, title) in enumerate([(U(a, b), "Union  max(A,B)"),
     ax[k].plot(x, a, "b--", label="A"); ax[k].plot(x, b, "g--", label="B")
     ax[k].fill_between(x, res, color="orange", alpha=0.5, label="Result")
     ax[k].set_title(title); ax[k].set_xlabel("x"); ax[k].legend(); ax[k].grid()
-plt.tight_layout(); plt.savefig("outputs/exp2_operations.png", dpi=120)
+plt.tight_layout();
+plt.show()
+plt.savefig("outputs/exp2_operations.png", dpi=120)
 print("\nPlot saved: outputs/exp2_operations.png")

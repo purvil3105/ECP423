@@ -1,8 +1,6 @@
 # Experiment 7: Comparison of fuzzy controller structures with a conventional PID
 # Plant : G(s) = 1 / ((s + 1)(0.5 s + 1))   ->   y'' = 2u - 3y' - 2y
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 def trimf(x, a, b, c):
@@ -100,5 +98,7 @@ ax[0].set_title("Output response (load disturbance at t = 10 s)")
 ax[0].set_xlabel("Time (s)"); ax[0].set_ylabel("y(t)"); ax[0].legend(); ax[0].grid()
 ax[1].set_title("Control signal u(t)"); ax[1].set_xlabel("Time (s)")
 ax[1].set_ylabel("u(t)"); ax[1].legend(); ax[1].grid()
-plt.tight_layout(); plt.savefig("outputs/exp7_comparison.png", dpi=120)
+plt.tight_layout();
+plt.show()
+plt.savefig("outputs/exp7_comparison.png", dpi=120)
 print("Plot saved: outputs/exp7_comparison.png")
