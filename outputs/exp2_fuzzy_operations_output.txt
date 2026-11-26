@@ -1,0 +1,36 @@
+PART A : Operations on fuzzy sets
+Operation                 x1    x2    x3    x4    x5    x6
+A                       0.20  0.50  0.80  1.00  0.60  0.10
+B                       0.60  0.30  0.90  0.40  0.70  0.00
+A U B  (max)            0.60  0.50  0.90  1.00  0.70  0.10
+A n B  (min)            0.20  0.30  0.80  0.40  0.60  0.00
+A'  (1-A)               0.80  0.50  0.20  0.00  0.40  0.90
+B'  (1-B)               0.40  0.70  0.10  0.60  0.30  1.00
+A - B = A n B'          0.20  0.50  0.10  0.60  0.30  0.10
+Algebraic sum           0.68  0.65  0.98  1.00  0.88  0.10
+Algebraic product       0.12  0.15  0.72  0.40  0.42  0.00
+Bounded sum             0.80  0.80  1.00  1.00  1.00  0.10
+Bounded difference      0.00  0.20  0.00  0.60  0.00  0.10
+
+PART B : Properties of fuzzy sets
+Commutative  A U B = B U A           : HOLDS
+Commutative  A n B = B n A           : HOLDS
+Associative  (AUB)UC = AU(BUC)       : HOLDS
+Associative  (AnB)nC = An(BnC)       : HOLDS
+Distributive An(BUC)=(AnB)U(AnC)     : HOLDS
+Distributive AU(BnC)=(AUB)n(AUC)     : HOLDS
+Idempotent   A U A = A               : HOLDS
+Idempotent   A n A = A               : HOLDS
+Identity     A U O = A               : HOLDS
+Identity     A n X = A               : HOLDS
+Absorption   A U (A n B) = A         : HOLDS
+Involution   (A')' = A               : HOLDS
+De Morgan    (A U B)' = A' n B'      : HOLDS
+De Morgan    (A n B)' = A' U B'      : HOLDS
+Excluded middle  A U A' = X          : DOES NOT HOLD
+Contradiction    A n A' = O          : DOES NOT HOLD
+
+A U A' = [0.8 0.5 0.8 1.  0.6 0.9]  (not equal to X)
+A n A' = [0.2 0.5 0.2 0.  0.4 0.1]  (not equal to empty set)
+
+Plot saved: outputs/exp2_operations.png

@@ -1,0 +1,40 @@
+PART A : Fuzzy relation R = A x B
+A = [0.2 1.  0.6] 
+B = [0.5 0.9 0.3 1. ]
+R = A x B =
+ [[0.2 0.2 0.2 0.2]
+ [0.5 0.9 0.3 1. ]
+ [0.5 0.6 0.3 0.6]]
+
+PART B : Composition of R (X x Y) and S (Y x Z)
+R =
+ [[0.7 0.5 0.2]
+ [0.8 0.4 0.9]
+ [0.1 0.6 1. ]] 
+S =
+ [[0.9 0.3]
+ [0.2 0.8]
+ [0.5 0.6]]
+Max-min composition  T = R o S =
+ [[0.7 0.5]
+ [0.8 0.6]
+ [0.5 0.6]]
+Max-product composition T = R . S =
+ [[0.63 0.4 ]
+ [0.72 0.54]
+ [0.5  0.6 ]]
+Associative (RoS)oQ = Ro(SoQ) : True
+Inverse (RoS)^T = S^T o R^T   : True
+
+PART C : Approximate reasoning
+Rule: IF temp is HIGH THEN speed is FAST
+HIGH = [0.  0.3 0.7 1. ]   FAST = [0.1 0.4 0.8 1. ]
+Rule relation (Mamdani min) R =
+ [[0.  0.  0.  0. ]
+ [0.1 0.3 0.3 0.3]
+ [0.1 0.4 0.7 0.7]
+ [0.1 0.4 0.8 1. ]]
+Given A' (fairly high) = [0.  0.5 1.  0.6]
+Inferred B' = A' o R (Mamdani) = [0.1 0.4 0.7 0.7]
+Inferred B' = A' o R (Larsen)  = [0.1 0.4 0.6 0.7]
+Check: if A' = HIGH then B' = [0.1 0.4 0.8 1. ] (= FAST)

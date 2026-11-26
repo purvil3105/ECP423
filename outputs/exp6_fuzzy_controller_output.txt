@@ -1,0 +1,24 @@
+Rule base (rows = e, cols = de):
+      NB  NS  ZE  PS  PB
+  NB  NB  NB  NB  NS  ZE
+  NS  NB  NB  NS  ZE  PS
+  ZE  NB  NS  ZE  PS  PB
+  PS  NS  ZE  PS  PB  PB
+  PB  ZE  PS  PB  PB  PB
+
+FLC sample outputs (normalised):
+  e =  1.00, de =  0.00  ->  du =  0.837
+  e =  0.50, de = -0.50  ->  du =  0.000
+  e =  0.00, de =  0.00  ->  du =  0.000
+  e = -0.30, de =  0.20  ->  du = -0.061
+  e = -1.00, de = -1.00  ->  du = -0.837
+
+Step response 0 -> 1.0 m:
+  Rise time (10-90%)   = 4.70 s
+  Peak overshoot       = 0.21 %
+  Settling time (2%)   = 7.10 s
+  Steady-state error   = 0.0000 m
+Level at t = 110 s (set-point 1.5 m) = 1.500 m
+Level at t = 149 s (after leak)      = 1.500 m
+
+Plot saved: outputs/exp6_flc.png

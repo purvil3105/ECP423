@@ -1,0 +1,10 @@
+Plant: G(s) = 1/((s+1)(0.5s+1)), unit step at t=0, load 0.3 at t=10 s
+
+Controller    Rise(s)   OS(%)   Ts(s)     Ess     IAE  Dip(%)
+PID              0.68   12.22    3.06   0.000   0.763    5.21
+Fuzzy PD         1.37    0.00    2.69   0.152   4.249   21.94
+Fuzzy PI         1.60    0.00    3.91   0.000   1.400    5.99
+Fuzzy PD+I       1.19    0.00    2.16   0.000   0.774    3.42
+
+Rise, overshoot and settling time are measured w.r.t. the final value.
+Plot saved: outputs/exp7_comparison.png

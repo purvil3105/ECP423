@@ -1,0 +1,27 @@
+Input: Temperature = 27 C, Humidity = 65 %
+Fuzzification:
+  T : {'Cold': 0.0, 'Warm': 0.3, 'Hot': 0.7}
+  H : {'Low': 0.0, 'Med': 0.5, 'High': 0.5}
+Fired rules:
+  IF T is Warm AND H is Med  THEN Medium  w = 0.300
+  IF T is Warm AND H is High THEN Fast    w = 0.300
+  IF T is Hot  AND H is Med  THEN Fast    w = 0.500
+  IF T is Hot  AND H is High THEN Fast    w = 0.500
+Defuzzified fan speed (%):
+  Centroid     =  68.84
+  Bisector     =  71.70
+  MOM          =  83.75
+  SOM          =  67.50
+  LOM          = 100.00
+  Weighted avg =  71.88
+
+Comparison of defuzzification methods (fan speed %)
+   T    H      Centroid      Bisector           MOM           SOM           LOM  Weighted avg
+   5   10         17.03         16.20         10.00          0.00         20.00         15.00
+  15   40         34.44         34.20         30.93          0.00         62.50         32.50
+  20   50         50.00         50.00         50.00         50.00         50.00         50.00
+  27   65         68.84         71.70         83.75         67.50        100.00         71.88
+  32   30         60.77         57.30         50.00         41.70         58.30         61.67
+  38   90         82.97         83.80         90.00         80.00        100.00         85.00
+
+Plot saved: outputs/exp5_fis.png
